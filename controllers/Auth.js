@@ -174,7 +174,7 @@ exports.Login = async (req, res) => {
         // Create and assign token
         const token = jwt.sign(
             { userId: existingUser._id, email: existingUser.email ,
-                role:existingUser.role
+                accuntType:existingUser.accuntType
             },
             process.env.JWT_SECRET,
             { expiresIn: "1h" }
